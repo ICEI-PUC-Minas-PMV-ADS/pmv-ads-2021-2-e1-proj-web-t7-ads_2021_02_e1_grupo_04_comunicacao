@@ -1,23 +1,23 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`Analise e desenvolvimento de sistemas `
 
-`DISCIPLINA`
+`web front-end`
 
-`SEMESTRE`
+`Primeiro`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Moisés Hastenraiter Da silva
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Curcino De Lima
 
 ## Instruções de utilização
 
