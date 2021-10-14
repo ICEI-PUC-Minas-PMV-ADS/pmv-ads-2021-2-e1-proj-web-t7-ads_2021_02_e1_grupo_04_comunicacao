@@ -7,7 +7,9 @@ As apreensões para a montagem da interface do sistema, estamos situando foco em
 
  Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
-## User Flow
+## Diagrama de Componentes
+Os componentes que fazem parte da solução são apresentados na Figura 31 a seguir.
+
 
 ![Exemplo de UserFlow]![WhatsApp Image 2021-10-09 at 01 50 29 (1)](https://user-images.githubusercontent.com/91229745/137234005-3e5a63f8-c9c2-4512-a498-a551eff77e29.jpeg)
 
