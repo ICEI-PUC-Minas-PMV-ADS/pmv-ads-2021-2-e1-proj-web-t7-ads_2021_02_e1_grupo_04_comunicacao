@@ -5,9 +5,7 @@ Em diversas empresas a comunicação, entre funcionários, sofrem ruídos que at
 Devido observação e pesquisa de campo com funcionários das empresas acreditamos, que o desenvolvimento de uma plataforma de comunicação, entre os trabalhadores, diminuiria o risco de equívocos tanto na comunicação quanto na própria execução dos trabalhos. A plataforma visa a praticidade e o melhor desempenho dos funcionários em suas tarefas. A plataforma web pode ser acessada por meio de um link de acesso, por qualquer dispositivo que tenha acesso a web. Sistema este que facilitará e contribuirá para o trabalho dos funcionários e toda a empresa promovendo a agilidade e eficácia na execução dos trabalhos o que deixará mais nítida qual as informações que os funcionários de um turno desejam passar para os de outros. Assim o projeto modificará a dinâmica de toda empresa, com mais precisão, nas realizações das tarefas a serem executadas.  
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+A realização do projeto visa, resolver a qualidade da comunicação entre os funcionários das empresas. Funcionários estes da área de manutenção. O projeto resolveria, via um sistema de controle de manutenção, com troca de imagens e mensagens, buscando dar mais agilidade e qualidade ao trabalho realizado.
 
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
@@ -18,28 +16,16 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-O objetivo é a criação de uma plataforma digital que seria feito através de um  website e ou aplicativo, que resolveria os problemas de comunicação com mais eficácia, tornando assim o trabalho melhor executado. 
+Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
 
- 
-
-Como objetivos específicos, podemos ressaltar: 
-
-Cadastrar unidades (local e nome da mina). 
-
-Cadastro de equipamento (manutenção). 
-
-Cadastro da equipe (supervisor). 
-
-Cadastro da tarefa (Histórico/corretiva ou preventiva). 
-
-Relatórios Técnicos.  
+Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Devido dificuldade de comunicação entre os executantes da manutenção, de turnos diferentes, em diversas oficinas, causando um atraso e ou erros nos trabalhos dos executantes da manutenção, visamos desenvolver um chat para que não ocorra mais tais problemas como os citados acima.   
 
 O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
@@ -48,8 +34,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público alvo é composto por funcionários da manutenção de equipamentos de mina, são estes homens e ou mulheres, maiores de 18 anos. O público está carente de um meio de comunicação para a resolução dos problemas com os equipamentos da mina.
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
