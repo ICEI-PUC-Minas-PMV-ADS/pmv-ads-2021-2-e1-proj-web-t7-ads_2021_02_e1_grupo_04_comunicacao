@@ -13,7 +13,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Nome completo do aluno 1 Moises Hastenraiter Da Silva
 * Nome completo do aluno 2 Isabella da Conceição Corrêa
 * Nome completo do aluno 3 Julia Berto Rosa
-* Nome completo do aluno 4
+* Nome completo do aluno 4 Marcelo dos Santos Farias
 * 
 ## Orientador
 
