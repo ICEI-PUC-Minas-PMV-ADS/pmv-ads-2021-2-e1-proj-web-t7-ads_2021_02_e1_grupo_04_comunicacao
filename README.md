@@ -1,10 +1,10 @@
-# TÍTULO DO PROJETO
+# Comunicação Direta
 
-`CURSO`
+`CURSO`Análise e dessedesenvolvimento de 
 
-`DISCIPLINA`
+`DISCIPLINA`Desenvolvimento Web Front-end
 
-`SEMESTRE`
+`SEMESTRE`Primeiro
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
