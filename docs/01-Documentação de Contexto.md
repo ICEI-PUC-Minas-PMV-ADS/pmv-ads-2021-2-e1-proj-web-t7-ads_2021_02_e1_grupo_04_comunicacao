@@ -1,6 +1,8 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Em diversas empresas a comunicação, entre funcionários, sofrem ruídos que atrapalham no desempenho do trabalho. 
+
+Devido observação e pesquisa de campo com funcionários das empresas acreditamos, que o desenvolvimento de uma plataforma de comunicação, entre os trabalhadores, diminuiria o risco de equívocos tanto na comunicação quanto na própria execução dos trabalhos. A plataforma visa a praticidade e o melhor desempenho dos funcionários em suas tarefas. A plataforma web pode ser acessada por meio de um link de acesso, por qualquer dispositivo que tenha acesso a web. Sistema este que facilitará e contribuirá para o trabalho dos funcionários e toda a empresa promovendo a agilidade e eficácia na execução dos trabalhos o que deixará mais nítida qual as informações que os funcionários de um turno desejam passar para os de outros. Assim o projeto modificará a dinâmica de toda empresa, com mais precisão, nas realizações das tarefas a serem executadas.  
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
