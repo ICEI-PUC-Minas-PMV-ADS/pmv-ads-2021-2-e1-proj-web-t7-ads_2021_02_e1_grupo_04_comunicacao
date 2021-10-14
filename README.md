@@ -1,6 +1,6 @@
 # Comunicação Direta
 
-`CURSO`Análise e dessedesenvolvimento de 
+`CURSO`Análise e dessedesenvolvimento de sistemas 
 
 `DISCIPLINA`Desenvolvimento Web Front-end
 
