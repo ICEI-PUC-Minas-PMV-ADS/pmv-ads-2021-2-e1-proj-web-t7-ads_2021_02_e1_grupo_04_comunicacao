@@ -14,7 +14,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Nome completo do aluno 2 Isabella da Conceição Corrêa
 * Nome completo do aluno 3 Julia Berto Rosa
 * Nome completo do aluno 4 Marcelo dos Santos Farias
-* 
+* NOme Completo do aluno 5  Diego Lúcio De Paula Rocha
 ## Orientador
 
 * Nome completo do professor 1 Mateus Curcino De Lima
