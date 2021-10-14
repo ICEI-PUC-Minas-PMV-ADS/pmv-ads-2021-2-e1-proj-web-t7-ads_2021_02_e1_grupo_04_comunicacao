@@ -16,9 +16,21 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo é a criação de uma plataforma digital que seria feito através de um  website e ou aplicativo, que resolveria os problemas de comunicação com mais eficácia, tornando assim o trabalho melhor executado. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+ 
+
+Como objetivos específicos, podemos ressaltar: 
+
+Cadastrar unidades (local e nome da mina). 
+
+Cadastro de equipamento (manutenção). 
+
+Cadastro da equipe (supervisor). 
+
+Cadastro da tarefa (Histórico/corretiva ou preventiva). 
+
+Relatórios Técnicos.  
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
