@@ -16,7 +16,7 @@ Devido observação e pesquisa de campo com funcionários das empresas acreditam
 * Nome completo do aluno 3 Julia Berto Rosa
 * Nome completo do aluno 4 Marcelo dos Santos Farias
 * Nome completo do aluno 5 Diego Lúcio De Paula Rocha
-* Nome completo do aluno 6 Mário César de Souza Fernandes 2
+* Nome completo do aluno 6 Mário César de Souza Fernandes 
 * Nome completo do aluno 7 Tayná Alves Ferraz
 
 ## Orientador
