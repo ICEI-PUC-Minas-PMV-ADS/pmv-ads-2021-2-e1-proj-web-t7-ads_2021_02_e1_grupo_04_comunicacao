@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <script type='text/javascript' src="js/cadastrofuncao.js"></script>
+    <link rel="stylesheet" href="css/cadastrofuncao.css">
+
+    
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>Função</th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Novo Funcionário</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Nome</div>
+            <div>
+                <input id='nome' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Matrícula</div>
+            <div>
+                <input type='text' id='matricula' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Função</div>
+            <div>
+                <input type='text' id='funcao' />
+            </div>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

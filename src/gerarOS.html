@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="js/gerarOS.js"></script>
+    <link rel="stylesheet"  href="css/gerarOS.css">
+    <title>Gerar OS</title>
+
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Equipamento</th>
+                    <th>Data de Parada</th>
+                    <th>Hora de Parada</th>
+                    <th>Data Prevista</th>
+                    <th>hora Prevista</th>
+                    <th>OM Cadastrada</th>
+                    <th>Equipe</th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Cadastrar OS</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Equipamento</div>
+            <div>
+                <input type='text'  id='equipamento' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Data de Parada</div>
+            <div>
+                <input type="date" id='dataParada' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Hora de Parada</div>
+            <div>
+                <input type='time' id='horaParada' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Data Prevista</div>
+            <div>
+                <input type='date' id='dataPrevista' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Hora Prevista</div>
+            <div>
+                <input type='time' id='horaPrevista' />
+            </div>
+        </div>
+
+        <div class="label">
+            <label><strong>Tipo de Serviços</strong></label>
+            <select name="id_OM" id="id_OM">
+                <!--<option value=""><strong></strong></option>-->
+            </select>
+        </div>
+
+        <div class='label'>
+            <div>Equipe</div>
+            <div>
+                <input type='text'  id='equipe' />
+            </div>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe</title>
+    <script type='text/javascript' src="js/equipe.js"></script>
+    <link rel="stylesheet" href="css/equipe.css">
+    
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nomes</th>
+                    <th>Ordem De Serviço</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Criar Equipe</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Nomes</div>
+            <div>
+                <input type="text" id='nomes' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Ordem De Serviço</div>
+            <div>
+                <input type='number' id='os' />
+            </div>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

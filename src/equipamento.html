@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos</title>
+    <script type='text/javascript' src="js/equipamento.js"></script>
+    <link rel="stylesheet" href="css/equipamento.css">
+    <link rel="shortcut icon" type="imagex/png" href="./icon/manutencao.ico">
+    </head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TAG</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>  
+                    <th>Descrição</th>
+                    <th>Grupo</th>
+
+                
+                        	
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Novo Equipamento</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        
+        <div class='label'>
+            <div>Tag</div>
+            <div>
+                <input type='text' id='tag' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Modelo</div>
+            <div>
+                <input type='text' id='modelo' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Marca</div>
+            <div>
+                <input type='text' id='marca' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Descrição</div>
+            <div>
+                <input type='text' id='descricao' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Grupo</div>
+            <div>
+                <input type='text' id='grupoequipamento' />
+            </div>        
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

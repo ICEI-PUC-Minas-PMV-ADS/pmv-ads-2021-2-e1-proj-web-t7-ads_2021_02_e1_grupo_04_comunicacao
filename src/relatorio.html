@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="js/relatorio.js"></script>
+    <link rel="stylesheet"  href="css/relatorio.css">
+    <title>Gerar Relatorio</title>
+
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>OS</th>
+                    <th>Equipamento</th>
+                    <th>Descrição</th>
+                        <tbody id='listaRegistrosBody'></tbody>
+                    </table>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Gerar Relatorio</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>OS</div>
+            <div>
+                <input type='text'  id='os' />
+            </div>
+        </div>
+        <div class="campo">
+            <br>
+            <label for="equipamento"><strong>Equipamento: </strong></label>
+            <textarea rows="6" style="width: 26em" id="equipamento" name="equipamento"></textarea>
+        </div>
+       
+
+        <div class='label'>
+            <div>Descrição</div>
+            <div>
+                <textarea rows="6" style="width: 26em" id="descricao" ></textarea>
+            </div>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

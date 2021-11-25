@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas</title>
+    <script type='text/javascript' src="./js/empresa.js"></script>
+    <link rel="stylesheet" href="./css/empresa.css">
+    
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Logo</th>
+                    <th>Logradouro</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Nova unidade</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Nome</div>
+            <div>
+                <input id='nome' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Logo</div>
+            <div>
+                <input type='text' id='logo' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Logradouro</div>
+            <div>
+                <input type='text' id='logradouro' />
+            </div>
+        </div>
+        
+            <div class='label'>
+                <div>Número</div>
+                <div>
+                    <input type='number' id='numero' />
+                </div>
+            </div>
+           
+            <div class='label'>
+                <div>Complemento</div>
+                <div>
+                    <input type='text' id='complemento' />
+                </div>
+            </div>
+           
+            <div class='label'>
+                <div>Cidade</div>
+                <div>
+                    <input type='text' id='cidade' />
+                </div>
+            </div>
+            
+            <div class='label'>
+                <div>UF</div>
+                <div>
+                    <input type='text' id='uf' />
+                </div>
+            </div>
+        
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
