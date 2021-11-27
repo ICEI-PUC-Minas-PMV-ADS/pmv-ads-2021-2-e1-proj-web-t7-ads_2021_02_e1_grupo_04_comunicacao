@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-image: url("https://contema.com.br/wp-content/uploads/2020/01/Manuten%C3%A7%C3%A3o-industrial-Entenda-como-funciona-sem-logo.jpg");
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: rgb(21, 4, 91);
+    padding: 10px;
+}
+
+.btn-abrir{
+    color: white;
+    font-size: 25px;
+}
+
+nav{
+    height: 100%;
+    width: 0px;
+    background-color: rgb(21, 4, 98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+nav a{
+    color: white;
+    font-size: 25px;
+    display: block;
+    padding: 12px 10px 12px 32p;
+}
+nav a:hover{
+    color: rgb(21, 4, 91);
+    background-color: white;
+    transition: margin-left 0.5s;
+}
+
+main{
+    padding: 10px;
+}
