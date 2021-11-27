@@ -94,8 +94,9 @@ function perguntarSeDeleta(id){
 
 
 function limparEdicao(){
-    document.getElementById('om').value = ''
-    document.getElementById('descricao').value = ''
+    document.getElementById('id').value = '';
+    document.getElementById('om').value = '';
+    document.getElementById('descricao').value = '';
 }
 
 function visualizar(pagina, novo=false, id=null){

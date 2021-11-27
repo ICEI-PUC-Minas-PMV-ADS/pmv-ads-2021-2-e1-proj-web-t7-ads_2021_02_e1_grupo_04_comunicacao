@@ -94,6 +94,7 @@ function perguntarSeDeleta(id){
 
 
 function limparEdicao(){
+    document.getElementById('id').value = ''
     document.getElementById('nomes').value = ''
     document.getElementById('os').value = ''
 }

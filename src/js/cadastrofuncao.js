@@ -84,8 +84,8 @@ function deleteUsuario(id){
     listaRegistros.usuarios = listaRegistros.usuarios.filter( usuario => {
         return usuario.id != id
     } )
-    gravarBD()
-    desenhar()
+    gravarBD();
+    desenhar();
 }
 
 function perguntarSeDeleta(id){
@@ -96,9 +96,10 @@ function perguntarSeDeleta(id){
 
 
 function limparEdicao(){
-    document.getElementById('nome').value = ''
-    document.getElementById('matricula').value = ''
-    document.getElementById('funcao').value = ''
+    document.getElementById('id').value = '';
+    document.getElementById('nome').value = '';
+    document.getElementById('matricula').value = '';
+    document.getElementById('funcao').value = '';
 }
 
 function visualizar(pagina, novo=false, id=null){

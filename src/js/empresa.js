@@ -105,6 +105,7 @@ function perguntarSeDeleta(id){
 
 
 function limparEdicao(){
+    document.getElementById('id').value = ''
     document.getElementById('nome').value = ''
     document.getElementById('logo').value = ''
     document.getElementById('logradouro').value = ''
