@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: rgb(21, 4, 91);
+    padding: 10px;
+}
+
+.btn-abrir{
+    color: white;
+    font-size: 25px;
+}
+
+nav{
+    height: 100%;
+    width: 0px;
+    background-color: rgb(21, 4, 98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+nav a{
+    color: white;
+    font-size: 25px;
+    display: block;
+    padding: 12px 10px 12px 32p;
+}
+nav a:hover{
+    color: rgb(21, 4, 91);
+    background-color: white;
+    transition: margin-left 0.5s;
+}
+
+main{
+    padding: 10px;
+}
+
+#listaRegistros{ display: none; }
+#cadastroRegistro{
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body[page=lista] #listaRegistros{ display: block; }
+body[page=cadastro] #cadastroRegistro{ display: flex; }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: solid 1px #ccc;
+}
+  
+tr:nth-child(even){background-color: #f2f2f2}
+
+button{
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #07a;
+    color: #fff;
+    margin: 3px;
+    padding: 10px 15px;
+}
+
+button.vermelho{
+    background-color: #a00;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+input{
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.label>div{
+    display: flex;
+}
+
+.label>div>input{
+    flex: 1;
+}

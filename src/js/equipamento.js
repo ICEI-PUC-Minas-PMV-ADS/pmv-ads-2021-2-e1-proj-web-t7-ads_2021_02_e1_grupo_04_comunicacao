@@ -50,11 +50,14 @@ function desenhar(){
                 <td>${equipamento.modelo}</td>
                 <td>${equipamento.marca}</td>
                 <td>${equipamento.descricao}</td>
-                <td>${equipamento.grupoequipamento}</td>
-                
+                <td>${equipamento.grupoequipamento}</td>                
                 <td>
-                            <button onclick='visualizar("cadastro",false,${equipamento.id})'>Editar</button>
-                            <button class='vermelho' onclick='perguntarSeDeleta(${equipamento.id})'>Deletar</button>
+                            <button onclick='visualizar("cadastro",false,${equipamento.id})'>
+                                <i class=" fa fa-edit"></i>
+                            </button>
+                            <button class='vermelho' onclick='perguntarSeDeleta(${equipamento.id})'>
+                                <i class=" fa fa-trash"></i>
+                            </button>
                         </td>
                     </tr>`
             } )

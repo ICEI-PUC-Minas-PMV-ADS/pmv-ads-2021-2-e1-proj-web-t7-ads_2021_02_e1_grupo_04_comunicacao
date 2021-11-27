@@ -50,8 +50,12 @@ function desenhar(){
                 <td>${usuario.matricula}</td>
                 <td>${usuario.funcao}</td>
                         <td>
-                            <button onclick='visualizar("cadastro",false,${usuario.id})'>Editar</button>
-                            <button class='vermelho' onclick='perguntarSeDeleta(${usuario.id})'>Deletar</button>
+                            <button onclick='visualizar("cadastro",false,${usuario.id})'>
+                                <i class=" fa fa-edit"></i>
+                            </button>
+                            <button class='vermelho' onclick='perguntarSeDeleta(${usuario.id})'>
+                                <i class=" fa fa-trash"></i>
+                            </button>
                         </td>
                     </tr>`
             } )

@@ -54,8 +54,12 @@ function desenhar(){
                         <td>${empresa.cidade}</td>
                         <td>${empresa.uf}</td>
                         <td>
-                            <button onclick='visualizar("cadastro",false,${empresa.id})'>Editar</button>
-                            <button class='vermelho' onclick='perguntarSeDeleta(${empresa.id})'>Deletar</button>
+                            <button onclick='visualizar("cadastro",false,${empresa.id})'>
+                                <i class=" fa fa-edit"></i>
+                            </button>
+                            <button class='vermelho' onclick='perguntarSeDeleta(${empresa.id})'>
+                                <i class=" fa fa-trash"></i>
+                            </button>
                         </td>
                     </tr>`
             } )

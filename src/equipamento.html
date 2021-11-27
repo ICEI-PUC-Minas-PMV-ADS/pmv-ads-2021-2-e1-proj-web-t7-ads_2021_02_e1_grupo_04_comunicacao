@@ -5,89 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipamentos</title>
     <script type='text/javascript' src="js/equipamento.js"></script>
-    <link rel="stylesheet" href="css/equipamento.css">
+    <link rel="stylesheet" href="css/telas.css">
     <link rel="shortcut icon" type="imagex/png" href="./icon/manutencao.ico">
+    <script type='text/javascript' src="js/menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     </head>
 <body page='lista'>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+    </header>
+    <nav id="menu">
+        <br>
+        <br>
+        <a href=""onclick="fecharMenu()">&times; Fechar</a>
+        <br>
+        <br>
+        <a href="gerarOS.html">Ordem de Serviço</a>
+        <br>
+        <br>
+        <a href="tipodeservico.html">Tipo de Serviço</a>
+        <br>
+        <br>
+        <a href="cadastroFuncao.html">Funcionários</a>
+        <br>
+        <br>
+        <a href="equipe.html">Equipe</a>
+        <br>
+        <br>
+        <a href="equipamento.html">Equipamentos</a>
+        <br>
+        <br>
+        <a href="relatorio.html">Relatório</a>
+        <br>
+        <br>
+        <a href="empresa.html">Consultar Unidade</a>
+    </nav>
+    <main id="conteudo">
     
-    <div id='listaRegistros'>
+        <div id='listaRegistros'>
 
-        <div style='display: flex;'>
-            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>TAG</th>
-                    <th>Modelo</th>
-                    <th>Marca</th>  
-                    <th>Descrição</th>
-                    <th>Grupo</th>
-
-                
-                        	
-                </tr>
-            </thead>
-            <tbody id='listaRegistrosBody'></tbody>
-        </table>
-
-        <div>
-            <button onclick="visualizar('cadastro', true)">Novo Equipamento</button>
-        </div>
-
-    </div>
-
-    <form id='cadastroRegistro'>
-
-        <div class='label'>
-            <div>ID</div>
-            <div>
-                <input type='number' readonly id='id' />
+            <div style='display: flex;'>
+                <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
             </div>
-        </div>
+            <br>
 
-        
-        <div class='label'>
-            <div>Tag</div>
-            <div>
-                <input type='text' id='tag' />
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TAG</th>
+                            <th>Modelo</th>
+                            <th>Marca</th>  
+                            <th>Descrição</th>
+                            <th>Grupo</th>
+                            <th>Operações</th>                                    
+                        </tr>
+                    </thead>
+                    <tbody id='listaRegistrosBody'></tbody>
+                </table>
             </div>
-        </div>
-
-        <div class='label'>
-            <div>Modelo</div>
             <div>
-                <input type='text' id='modelo' />
+                <button onclick="visualizar('cadastro', true)">Novo Equipamento</button>
             </div>
+
         </div>
 
-        <div class='label'>
-            <div>Marca</div>
-            <div>
-                <input type='text' id='marca' />
+        <form id='cadastroRegistro'>
+
+            <div class='label'>
+                <div>ID</div>
+                <div>
+                    <input type='number' readonly id='id' />
+                </div>
             </div>
-        </div>
 
-        <div class='label'>
-            <div>Descrição</div>
-            <div>
-                <input type='text' id='descricao' />
+            
+            <div class='label'>
+                <div>Tag</div>
+                <div>
+                    <input type='text' id='tag' />
+                </div>
             </div>
-        </div>
 
-        <div class='label'>
-            <div>Grupo</div>
+            <div class='label'>
+                <div>Modelo</div>
+                <div>
+                    <input type='text' id='modelo' />
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Marca</div>
+                <div>
+                    <input type='text' id='marca' />
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Descrição</div>
+                <div>
+                    <input type='text' id='descricao' />
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Grupo</div>
+                <div>
+                    <input type='text' id='grupoequipamento' />
+                </div>        
             <div>
-                <input type='text' id='grupoequipamento' />
-            </div>        
-        <div>
-            <button>Salvar</button>
-            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
-        </div>
+                <button>
+                    <i class="fa fa-save"></i>  Salvar
+                </button>
+                <button onclick="visualizar('lista')" class="vermelho" type='button'>
+                    <i class="fa fa-arrow-alt-circle-left"></i>  Voltar
+                </button>
+            </div>
 
-    </form>
-
+        </form>
+    </main>
 </body>
 </html>

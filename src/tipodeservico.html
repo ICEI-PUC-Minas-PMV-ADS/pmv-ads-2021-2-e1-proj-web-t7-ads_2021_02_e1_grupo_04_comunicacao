@@ -3,66 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários</title>
     <script type='text/javascript' src="js/tservico.js"></script>
-    <link rel="stylesheet" href="./css/tipodeservico.css">
-    
+    <link rel="stylesheet" href="css/telas.css">
+    <script type='text/javascript' src="js/menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <title>Tipo de Serviço</title>
+
 </head>
 <body page='lista'>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+    </header>
+    <nav id="menu">
+        <br>
+        <br>
+        <a href=""onclick="fecharMenu()">&times; Fechar</a>
+        <br>
+        <br>
+        <a href="gerarOS.html">Ordem de Serviço</a>
+        <br>
+        <br>
+        <a href="tipodeservico.html">Tipo de Serviço</a>
+        <br>
+        <br>
+        <a href="cadastroFuncao.html">Funcionários</a>
+        <br>
+        <br>
+        <a href="equipe.html">Equipe</a>
+        <br>
+        <br>
+        <a href="equipamento.html">Equipamentos</a>
+        <br>
+        <br>
+        <a href="relatorio.html">Relatório</a>
+        <br>
+        <br>
+        <a href="empresa.html">Consultar Unidade</a>
+    </nav>
+    <main id="conteudo">
     
-    <div id='listaRegistros'>
+        <div id='listaRegistros'>
 
-        <div style='display: flex;'>
-            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Cadastrar OM</th>
-                    <th>Descrição</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id='listaRegistrosBody'></tbody>
-        </table>
-
-        <div>
-            <button onclick="visualizar('cadastro', true)">Cadastrar OM</button>
-        </div>
-
-    </div>
-
-    <form id='cadastroRegistro'>
-
-        <div class='label'>
-            <div>ID</div>
-            <div>
-                <input type='number' readonly id='id' />
+            <div style='display: flex;'>
+                <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
             </div>
-        </div>
+            <br>
 
-        <div class='label'>
-            <div>Cadastrar OM</div>
-            <div>
-                <input type="number" id='om' />
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cadastrar OM</th>
+                            <th>Descrição</th>
+                            <th>Operações</th>
+                        </tr>
+                    </thead>
+                    <tbody id='listaRegistrosBody'></tbody>
+                </table>
             </div>
-        </div>
-
-        <div class='label'>
-            <div>Descrição</div>
             <div>
-                <input type='text' id='descricao' />
+                <button onclick="visualizar('cadastro', true)">Cadastrar OM</button>
             </div>
+
         </div>
 
-        <div>
-            <button>Salvar</button>
-            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
-        </div>
+        <form id='cadastroRegistro'>
 
-    </form>
+            <div class='label'>
+                <div>ID</div>
+                <div>
+                    <input type='number' readonly id='id' />
+                </div>
+            </div>
 
+            <div class='label'>
+                <div>Cadastrar OM</div>
+                <div>
+                    <input type="number" id='om' />
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Descrição</div>
+                <div>
+                    <input type='text' id='descricao' />
+                </div>
+            </div>
+
+            <div>
+                <button>
+                    <i class="fa fa-save"></i>  Salvar
+                </button>
+                <button onclick="visualizar('lista')" class="vermelho" type='button'>
+                    <i class="fa fa-arrow-alt-circle-left"></i>  Voltar
+                </button>
+            </div>
+
+        </form>
+    </main>
 </body>
 </html>

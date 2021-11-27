@@ -6,73 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type='text/javascript' src="js/relatorio.js"></script>
-    <link rel="stylesheet"  href="css/relatorio.css">
-    <title>Gerar Relatorio</title>
+    <link rel="stylesheet" href="css/telas.css">
+    <script type='text/javascript' src="js/menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <title>Gerar Relatório</title>
 
 </head>
 <body page='lista'>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+    </header>
+    <nav id="menu">
+        <br>
+        <br>
+        <a href=""onclick="fecharMenu()">&times; Fechar</a>
+        <br>
+        <br>
+        <a href="gerarOS.html">Ordem de Serviço</a>
+        <br>
+        <br>
+        <a href="tipodeservico.html">Tipo de Serviço</a>
+        <br>
+        <br>
+        <a href="cadastroFuncao.html">Funcionários</a>
+        <br>
+        <br>
+        <a href="equipe.html">Equipe</a>
+        <br>
+        <br>
+        <a href="equipamento.html">Equipamentos</a>
+        <br>
+        <br>
+        <a href="relatorio.html">Relatório</a>
+        <br>
+        <br>
+        <a href="empresa.html">Consultar Unidade</a>
+    </nav>
+    <main id="conteudo">
     
-    <div id='listaRegistros'>
+        <div id='listaRegistros'>
 
-        <div style='display: flex;'>
-            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>OS</th>
-                    <th>Equipamento</th>
-                    <th>Descrição</th>
-                        <tbody id='listaRegistrosBody'></tbody>
-                    </table>
-                </tr>
-            </thead>
-            <tbody id='listaRegistrosBody'></tbody>
-        </table>
-
-        <div>
-            <button onclick="visualizar('cadastro', true)">Gerar Relatorio</button>
-        </div>
-
-    </div>
-
-    <form id='cadastroRegistro'>
-
-        <div class='label'>
-            <div>ID</div>
-            <div>
-                <input type='number' readonly id='id' />
+            <div style='display: flex;'>
+                <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
             </div>
-        </div>
-
-        <div class='label'>
-            <div>OS</div>
-            <div>
-                <input type='text'  id='os' />
-            </div>
-        </div>
-        <div class="campo">
             <br>
-            <label for="equipamento"><strong>Equipamento: </strong></label>
-            <textarea rows="6" style="width: 26em" id="equipamento" name="equipamento"></textarea>
-        </div>
-       
 
-        <div class='label'>
-            <div>Descrição</div>
-            <div>
-                <textarea rows="6" style="width: 26em" id="descricao" ></textarea>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>OS</th>
+                            <th>Equipamento</th>
+                            <th>Descrição</th>
+                            <th>Operações</th>
+                        </tr>
+                    </thead>
+                    <tbody id='listaRegistrosBody'></tbody>
+                </table>
             </div>
+            <div>
+                <button onclick="visualizar('cadastro', true)">Gerar Relatorio</button>
+            </div>
+
         </div>
 
-        <div>
-            <button>Salvar</button>
-            <button onclick="visualizar('lista')" class="vermelho" type='button'>Cancelar</button>
-        </div>
+        <form id='cadastroRegistro'>
 
-    </form>
+            <div class='label'>
+                <div>ID</div>
+                <div>
+                    <input type='number' readonly id='id' />
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>OS</div>
+                <div>
+                    <input type='text'  id='os' />
+                </div>
+            </div>
+            <div class="campo">
+                <br>
+                <label for="equipamento"><strong>Equipamento: </strong></label>
+                <textarea rows="6" style="width: 26em" id="equipamento" name="equipamento"></textarea>
+            </div>
+        
+
+            <div class='label'>
+                <div>Descrição</div>
+                <div>
+                    <textarea rows="6" style="width: 26em" id="descricao" ></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button>
+                    <i class="fa fa-save"></i>  Salvar
+                </button>
+                <button onclick="visualizar('lista')" class="vermelho" type='button'>
+                    <i class="fa fa-arrow-alt-circle-left"></i>  Voltar
+                </button>
+            </div>
+
+        </form>
+    </main>
 
 </body>
 </html>
