@@ -134,3 +134,41 @@ body {
     text-decoration: none;
 
 }
+
+
+/* Alerta Erro
+----------------------------------------------- */
+/* Geral */
+ 
+.alerta {
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 10px;
+    font-size: 18px;
+}
+.error {
+    border-color: #e8273b;
+    color: #FFF;
+    background-color: #ed5565;
+    
+    height: 30px;
+    width: 92%;
+    margin-top: 0px;
+    padding:0px;
+}
+.sucesso {
+    border-color: #87c940;
+    color: #FFF;
+    background-color: #a0d468;
+}
+.atencao {
+    border-color: #f4a911;
+    color: #FFF;
+    background-color: #f6bb42;
+}
+.info {
+    border-color: #2f80e7;
+    color: #FFF;
+    background-color: #5d9cec;
+}

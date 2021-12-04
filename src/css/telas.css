@@ -1,6 +1,8 @@
-body {
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
 }
 
 a{
@@ -9,39 +11,95 @@ a{
 
 header{
     background-color: rgb(21, 4, 91);
-    padding: 10px;
+    padding: 20px;
 }
 
-.btn-abrir{
-    color: white;
-    font-size: 25px;
+main{ 
+    padding: 15px;
 }
-
-nav{
-    height: 100%;
-    width: 0px;
-    background-color: rgb(21, 4, 98);
+  
+.side-bar{
+    background: rgba(255,255,255 , 0.1);
+    background-color: rgb(21, 4, 91);
+    width: 290px;
+    height: 100vh;
     position: fixed;
-    top: 0;
+    top:0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+  
+.side-bar.active{
     left: 0;
-    z-index: 1;
-    transition: width 0.3s;
-    overflow: hidden;
 }
-nav a{
-    color: white;
-    font-size: 25px;
+  
+.side-bar .menu{
+    width: 100%;
+    margin-top: 80px;
+}
+  
+.side-bar .menu .item{
+    position:relative;
+    cursor:pointer;
+}
+  
+.side-bar .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
     display: block;
-    padding: 12px 10px 12px 32p;
+    padding: 5px 30px;
+    line-height: 60px;
 }
-nav a:hover{
-    color: rgb(21, 4, 91);
-    background-color: white;
-    transition: margin-left 0.5s;
+  
+.side-bar .menu .item a:hover{
+    background: #8621F8;
+    transition: 0.3s ease;
+  
 }
-
-main{
-    padding: 10px;
+  
+.side-bar .menu .item i{
+    margin-right: 15px;
+}
+  
+.side-bar .menu .item a .dropdown{
+    position: absolute;
+    right:0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+  
+.side-bar .menu .item .sub-menu{
+    background: rgba(255,255,255 , 0.1);
+    display:none;
+}
+  
+.side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+}
+  
+.rotate{
+    transform: rotate(90deg);
+}
+  
+.close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+  
+  
+.menu-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    margin: -5px;
+    cursor:pointer;
 }
 
 #listaRegistros{ display: none; }
@@ -53,11 +111,6 @@ main{
 
 body[page=lista] #listaRegistros{ display: block; }
 body[page=cadastro] #cadastroRegistro{ display: flex; }
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
 
 table {
     border-collapse: collapse;
@@ -97,6 +150,18 @@ input{
     padding: 10px;
 }
 
+select{
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+textarea {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
 .label>div{
     display: flex;
 }
@@ -105,6 +170,13 @@ input{
     flex: 1;
 }
 
+.label>div>select{
+    flex: 1;
+}
+
+.label>div>textarea{
+    flex: 1;
+}
 
 
 .container {
@@ -124,10 +196,37 @@ input{
 @media only screen  and (min-width: 769px){
     .bloco {
         float: left;
-        width: 48%;
+        width: 50%;
         height: 300px;
         margin-left: 0%;
-        margin-right: 2%;
+        margin-right: 0%;
         margin-bottom: 20px;
     }  
+}
+
+
+/* ########################################### */
+/*            detail.html                      */
+/* ########################################### */
+.head{
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+}
+
+.content{
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top: 5px;
 }

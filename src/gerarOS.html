@@ -10,37 +10,40 @@
     <title>Gerar OS</title>
     <script type='text/javascript' src="js/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
 </head>
 <body page='lista'>
     <header>
-        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+        <nav>
+            <div class="menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="side-bar">
+              <div class="close-btn">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="menu">
+                <div class="item"><a href="telaprincipal.html"><i class="fas fa-desktop"></i>Home</a></div>
+                <div class="item">
+                  <a class="sub-btn"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
+                  <div class="sub-menu">
+                    <a href="tipodeservico.html" class="sub-item">Tipo de Serviço</a>
+                    <a href="equipamento.html" class="sub-item">Equipamentos</a>
+                  </div>
+                </div>
+                <div class="item"><a href="gerarOS.html"><i class="fas fa-industry"></i>Ordem de Serviço</a></div>
+                <div class="item">
+                  <a class="sub-btn"><i class="fas fa-cogs"></i>Configuções<i class="fas fa-angle-right dropdown"></i></a>
+                  <div class="sub-menu">
+                    <a href="cadastroFuncao.html" class="sub-item">Usuário</a>
+                    <a href="empresa.html" class="sub-item">Dados da Empresa</a>
+                  </div>
+                </div>
+                <div class="item"><a href="index.html"><i class="fas fa-info-circle"></i>Log out</a></div>
+              </div>
+            </div>        
+          </nav>
     </header>
-    <nav id="menu">
-        <br>
-        <br>
-        <a href=""onclick="fecharMenu()">&times; Fechar</a>
-        <br>
-        <br>
-        <a href="gerarOS.html">Ordem de Serviço</a>
-        <br>
-        <br>
-        <a href="tipodeservico.html">Tipo de Serviço</a>
-        <br>
-        <br>
-        <a href="cadastroFuncao.html">Funcionários</a>
-        <br>
-        <br>
-        <a href="equipe.html">Equipe</a>
-        <br>
-        <br>
-        <a href="equipamento.html">Equipamentos</a>
-        <br>
-        <br>
-        <a href="relatorio.html">Relatório</a>
-        <br>
-        <br>
-        <a href="empresa.html">Consultar Unidade</a>
-    </nav>
     <main id="conteudo">
     
         <div id='listaRegistros'>
@@ -79,21 +82,21 @@
 
         <form id='cadastroRegistro'>
 
-            
-            <div class='label'>
+            <div  class="label">
                 <div>ID</div>
                 <div>
                     <input type='number' readonly id='id' />
                 </div>
             </div>
         
-            <div class='label'>
+            <div class="label">
                 <div>Equipamento</div>
                 <div>
-                    <input type='text'  id='equipamento' />
+                       <input type='text'  id='equipamento' />
                 </div>
-            </div>            
-
+            </div> 
+            
+            
             <div class='label'>
                 <div>Data de Parada</div>
                 <div>
@@ -123,18 +126,29 @@
             </div>
 
             <div class="label">
-                <label><strong>Tipo de Serviços</strong></label>
-                <select name="id_OM" id="id_OM">
-                    <!--<option value=""><strong></strong></option>-->
-                </select>
+                <div>Tipo de Serviços</div>
+                <div>
+                    <select name="id_OM" id="id_OM">
+                        <!--<option value=""><strong></strong></option>-->
+                    </select>
+                </div>
             </div>
 
-            <div class='label'>
+            
+            <div class='label' style = "display:none">
                 <div>Equipe</div>
                 <div>
                     <input type='text'  id='equipe' />
                 </div>
             </div>
+
+            <div class='label'>
+                <div>Observação da Manutenção</div>
+                <div>
+                    <textarea rows="6" style="width: 26em" id="obsOs" ></textarea>
+                </div>
+            </div>
+            
 
             <div>
                 <button>
@@ -144,8 +158,15 @@
                     <i class="fa fa-arrow-alt-circle-left"></i>  Voltar
                 </button>
             </div>
-
+            <div class="topic-container" style = "display:none" id="historico">
+                <!--Original thread-->
+                <div class="head">
+                    <div class="content">Histórico de Observação:</div>
+                </div>
+                <div class="topic-container" id="menssagens"></div>
+            </div>
         </form>
     </main>
+    <script src="js/menu.js"></script>
 </body>
 </html>

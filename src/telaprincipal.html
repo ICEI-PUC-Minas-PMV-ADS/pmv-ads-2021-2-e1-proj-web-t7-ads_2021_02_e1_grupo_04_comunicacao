@@ -1,90 +1,64 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-
     <head>
-
         <meta charset="UTF-8">
-
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
         <meta name="viewport"content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="css/telas.css">
-		
 		<link rel="shortcut icon" type="imagex/png" href="./icon/manutencao.ico">
-		
         <script type='text/javascript' src="js/menu.js"></script>
-
-
-        <title>Tela Principal</title>
-
+        <title>Tela Principal</title>        
+		<link rel="stylesheet" href="css/telas.css">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
         <style>
             body {
                 background-image: url("https://contema.com.br/wp-content/uploads/2020/01/Manuten%C3%A7%C3%A3o-industrial-Entenda-como-funciona-sem-logo.jpg");
             }
         </style>
-    <script>
-        google.charts.load('current', {'packages':['corechart']});
-        function desenharPizza (){
-            var tabela = new google.visualization.DataTable();
-            tabela.addColumn('string','categorias');
-            tabela.addColumn('number','valores');
-            tabela.addRows([
-                ['Educação',2000],
-                ['Transporte',500],
-                ['Lazer',230],
-                ['Saúde',50],
-                ['Cartão de crédito',900],
-                ['Alimentação',260]
-            ]);
-            var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
-            grafico.draw(tabela);
-        }
-        google.charts.setOnLoadCallback(desenharPizza);
-    </script>
-
-    </head>
-																						
+    </head>																						
     <body>
         <header>
-            <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+            <nav>
+                <div class="menu-btn">
+                  <i class="fas fa-bars"></i>
+                </div>
+                <div class="side-bar">
+                  <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                  </div>
+                  <div class="menu">
+                    <div class="item"><a href="telaprincipal.html"><i class="fas fa-desktop"></i>Home</a></div>
+                    <div class="item">
+                      <a class="sub-btn"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
+                      <div class="sub-menu">
+                        <a href="tipodeservico.html" class="sub-item">Tipo de Serviço</a>
+                        <a href="equipamento.html" class="sub-item">Equipamentos</a>
+                      </div>
+                    </div>
+                    <div class="item"><a href="gerarOS.html"><i class="fas fa-industry"></i>Ordem de Serviço</a></div>
+                    <div class="item">
+                      <a class="sub-btn"><i class="fas fa-cogs"></i>Configuções<i class="fas fa-angle-right dropdown"></i></a>
+                      <div class="sub-menu">
+                        <a href="cadastroFuncao.html" class="sub-item">Usuário</a>
+                        <a href="empresa.html" class="sub-item">Dados da Empresa</a>
+                      </div>
+                    </div>
+                    <div class="item"><a href="index.html"><i class="fas fa-info-circle"></i>Log out</a></div>
+                  </div>
+                </div>        
+              </nav>
         </header>
-        <nav id="menu">
-            <br>
-            <a href=""onclick="fecharMenu()">&times; Fechar</a>
-            <br>
-            <a href="telaprincipal.html">Home</a>
-            <br>
-            <a href="gerarOS.html">Ordem de Serviço</a>
-            <br>
-            <a href="tipodeservico.html">Tipo de Serviço</a>
-            <br>
-            <a href="cadastroFuncao.html">Funcionários</a>
-            <br>
-            <a href="equipe.html">Equipe</a>
-            <br>
-            <a href="equipamento.html">Equipamentos</a>
-            <br>
-            <a href="relatorio.html">Relatório</a>
-            <br>
-            <a href="empresa.html">Consultar Unidade</a>
-            <br>
-            <a href="index.html">Log out</a>
-        </nav>
         <main id="conteudo">
-            <H1 >
-                Supevisor
-            </H1>
-            <p>
-                Gráficos
-            </p>
-            <div class="bloco" id="graficoPizza"></div>
+            <div class="container">
+                <div class="bloco" id="graficoPizza"></div>
                 <div class="bloco" id="graficoPizza2"></div>                
                 <div class="bloco" id="graficoPizza3"></div>               
                 <div class="bloco" id="graficoPizza4"></div>
+            </div>
         </main>
+
+        <script src="js/menu.js"></script>
     </body>
 </html>

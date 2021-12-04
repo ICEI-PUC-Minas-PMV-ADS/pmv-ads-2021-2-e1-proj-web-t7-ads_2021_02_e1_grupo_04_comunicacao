@@ -4,9 +4,11 @@ const KEY_BD_TP_SERVICO ='@tiposervicossestudo'
 
 var listaRegistros = {
     ultimoIdGerado:0,
-    oss:[]
+    oss:[],
+    observacao:[]
 }
 
+let mostrar
 
 var FILTRO = ''
 
@@ -68,19 +70,32 @@ function desenhar(){
     }
 }
 
-function insertOs(equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe){
+function insertOs(equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe, obsOs){
     const id = listaRegistros.ultimoIdGerado + 1;
+    console.log("obsOs: "+ obsOs)
+    let observacao = [];
+    if (obsOs.trim().length>0) {
+        var data = new Date();
+        var obs = obsOs.trim().replace(/\r?\n/g, '<br/>');
+        observacao.push({obs, data})
+    }
     listaRegistros.ultimoIdGerado = id;
     listaRegistros.oss.push({
-        id, equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe
+        id, equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe, observacao
     })
     gravarBD()
     desenhar()
     visualizar('lista')
 }
 
-function editOs(id, equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe){
-    var os = listaRegistros.oss.find( os => os.id == id )
+function editOs(id, equipamento, dataParada, horaParada, dataPrevista, horaPrevista, id_OM, equipe, obsOs){
+    var os = listaRegistros.oss.find( os => os.id == id );
+    let observacao = os.observacao;
+    if (obsOs.trim().length>0) {
+        var data = new Date();
+        var obs = obsOs.trim().replace(/\r?\n/g, '<br/>');
+        observacao.push({obs, data})
+    }
     os.equipamento = equipamento;
     os.dataParada = dataParada;
     os.horaParada = horaParada;
@@ -117,13 +132,20 @@ function limparEdicao(){
     document.getElementById('horaPrevista').value = ''
     document.getElementById('id_OM').value = ''
     document.getElementById('equipe').value = ''
+    document.getElementById('obsOs').value = ''
 }
 
 function visualizar(pagina, novo=false, id=null){
     document.body.setAttribute('page',pagina)
     if(pagina === 'cadastro'){
-        if(novo) limparEdicao()
+        if(novo) {
+            limparEdicao()
+            document.getElementById('historico').style.display = 'none';
+        }
         if(id){
+            limparEdicao()
+            
+            document.getElementById('historico').style.display = 'block';
             const os = listaRegistros.oss.find( os => os.id == id )
             if(os){
                  document.getElementById('id').value = os.id
@@ -134,6 +156,7 @@ function visualizar(pagina, novo=false, id=null){
                 document.getElementById('horaPrevista').value = os.horaPrevista
                 document.getElementById('id_OM').value = os.id_OM
                 document.getElementById('equipe').value = os.equipe
+                carregarObservacoes(os.observacao);
             }
         }
         carregarTipoServico();
@@ -155,11 +178,13 @@ function submeter(e){
         horaPrevista: document.getElementById('horaPrevista').value,
         id_OM: document.getElementById('id_OM').value,
         equipe: document.getElementById('equipe').value,
+        obsOs: document.getElementById('obsOs').value,
     }
+    console.log("OBS222: " + data.obsOs);
     if(data.id){
-        editOs(data.id, data.equipamento, data.dataParada, data.horaParada, data.dataPrevista , data.horaPrevista, data.id_OM, data.equipe)
+        editOs(data.id, data.equipamento, data.dataParada, data.horaParada, data.dataPrevista , data.horaPrevista, data.id_OM, data.equipe, data.obsOs)
     }else{
-        insertOs( data.equipamento, data.dataParada, data.horaParada, data.dataPrevista, data.horaPrevista, data.id_OM, data.equipe )
+        insertOs( data.equipamento, data.dataParada, data.horaParada, data.dataPrevista, data.horaPrevista, data.id_OM, data.equipe, data.obsOs )
     }
 }
 
@@ -207,6 +232,53 @@ function carregarTipoServico(){
             } )
         //select.innerHTML = data.join('')
     }
+}
+
+function carregarObservacoes(obsOs){
+    const msgDiv = document.getElementById('menssagens');
+    if(msgDiv){
+        var data = obsOs;
+        data = data
+            .map( obs => {
+                return `<div class="body">
+                <div class="content">
+                    ${obs.obs}
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    ${dataFormatada(obs.data)}
+                    <br>
+                </div>
+            </div>`
+            });
+        msgDiv.innerHTML = data.join('');
+    }
+}
+
+function dataFormatada(valueDate){
+var data = new Date(valueDate);    
+
+// Guarda cada pedaço em uma variável
+var dia     = data.getDate();           // 1-31
+var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+var ano2    = data.getYear();           // 2 dígitos
+var ano4    = data.getFullYear();       // 4 dígitos
+var hora    = data.getHours();          // 0-23
+var min     = data.getMinutes();        // 0-59
+var seg     = data.getSeconds();        // 0-59
+var mseg    = data.getMilliseconds();   // 0-999
+var tz      = data.getTimezoneOffset(); // em minutos
+
+// Formata a data e a hora (note o mês + 1)
+var str_data = dia.toString().padStart(2, '0') + '/' + (mes+1).toString().padStart(2, '0') + '/' + ano4;
+var str_hora = hora.toString().padStart(2, '0') + ':' + min.toString().padStart(2, '0') + ':' + seg.toString().padStart(2, '0');
+
+return str_data + ' ' + str_hora;
+
+// Mostra o resultado
+alert('Hoje é ' + str_data + ' às ' + str_hora);
 }
 
 
