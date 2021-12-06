@@ -12,6 +12,7 @@ function Login() {
       var us = usuarios[u];
       if (us.login === usuario && us.senha === password) {
         document.getElementById('erroMsg').style.display = 'none';
+        setUsuarioSession(usuario);
         return true;
       }
   }
@@ -19,4 +20,9 @@ function Login() {
   
   document.getElementById('erroMsg').style.display = 'block';
   return false;
+}
+
+function setUsuarioSession(usuario) {
+  console.log('teste: '+ usuario);
+  sessionStorage.setItem('usuario', usuario);
 }

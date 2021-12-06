@@ -25,14 +25,14 @@
               <div class="menu">
                 <div class="item"><a href="telaprincipal.html"><i class="fas fa-desktop"></i>Home</a></div>
                 <div class="item">
-                  <a class="sub-btn"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
+                  <a class="sub-btn" id="menuCadastro"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
                   <div class="sub-menu">
                     <a href="tipodeservico.html" class="sub-item">Tipo de Serviço</a>
                     <a href="equipamento.html" class="sub-item">Equipamentos</a>
                   </div>
                 </div>
                 <div class="item"><a href="gerarOS.html"><i class="fas fa-industry"></i>Ordem de Serviço</a></div>
-                <div class="item">
+                <div class="item" id="menuConfiguracoes">
                   <a class="sub-btn"><i class="fas fa-cogs"></i>Configuções<i class="fas fa-angle-right dropdown"></i></a>
                   <div class="sub-menu">
                     <a href="cadastroFuncao.html" class="sub-item">Usuário</a>
@@ -41,8 +41,8 @@
                 </div>
                 <div class="item"><a href="index.html"><i class="fas fa-info-circle"></i>Log out</a></div>
               </div>
-            </div>        
-          </nav>
+            </div>                    
+        </nav>
     </header>
     <main id="conteudo">
     
@@ -71,13 +71,9 @@
                     <tbody id='listaRegistrosBody'></tbody>
                 </table>
             </div>
-
-            
-
             <div>
                 <button onclick="visualizar('cadastro', true)">Cadastrar OS</button>
             </div>
-
         </div>
 
         <form id='cadastroRegistro'>
@@ -158,14 +154,42 @@
                     <i class="fa fa-arrow-alt-circle-left"></i>  Voltar
                 </button>
             </div>
+            
+        </form>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3>Histórico da manutenção</h3>
+                </div>
+                <div class="modal-body">
+
+                    <div class="topic-container" style = "display:none" id="historico">
+                        <!--Original thread-->
+                        <div class="head">
+                            <div class="content"></div>
+                        </div>
+                        <div class="topic-container" id="menssagens"></div>
+                    </div>
+                    <br>
+                    <button class ="modal-button" onclick="fecharDialog()">
+                        <i class="far fa-check-circle"></i>
+                    </button>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!--<dialog id="favDialog">
             <div class="topic-container" style = "display:none" id="historico">
-                <!--Original thread-->
                 <div class="head">
                     <div class="content">Histórico de Observação:</div>
                 </div>
                 <div class="topic-container" id="menssagens"></div>
             </div>
-        </form>
+            <button onclick="fecharDialog()">
+                <i class="far fa-check-circle"></i>
+            </button>
+        </dialog>-->
     </main>
     <script src="js/menu.js"></script>
 </body>

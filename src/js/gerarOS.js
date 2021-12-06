@@ -61,7 +61,10 @@ function desenhar(){
                                 <i class=" fa fa-edit"></i>
                             </button>
                             <button class='vermelho' onclick='perguntarSeDeleta(${os.id})'>
-                             <i class=" fa fa-trash"></i>
+                                <i class=" fa fa-trash"></i>
+                            </button>
+                            <button onclick='visualizar("historico",false,${os.id})'>
+                                <i class="fas fa-history"></i>
                             </button>
                         </td>
                     </tr>`
@@ -162,7 +165,22 @@ function visualizar(pagina, novo=false, id=null){
         carregarTipoServico();
 
         document.getElementById('equipamento').focus()
-    }
+    } 
+    else if(pagina === 'historico'){
+        if(id){
+            document.getElementById('historico').style.display = 'block';
+            const os = listaRegistros.oss.find( os => os.id == id )
+            if(os.observacao){
+                 carregarObservacoes(os.observacao);
+                 //document.getElementById('favDialog').showModal();
+                 document.getElementById("myModal").style.display = "block";
+            } else {
+                
+                visualizar('lista');
+            }
+
+        }
+    } 
 }
 
 
@@ -244,8 +262,6 @@ function carregarObservacoes(obsOs){
                 <div class="content">
                     ${obs.obs}
                     <br>
-                    <br>
-                    <br>
                     <hr>
                     ${dataFormatada(obs.data)}
                     <br>
@@ -253,7 +269,15 @@ function carregarObservacoes(obsOs){
             </div>`
             });
         msgDiv.innerHTML = data.join('');
+    } else {
+        msgDiv.innerHTML = '';
     }
+}
+
+function fecharDialog() {
+    //document.getElementById('favDialog').close();
+    document.getElementById("myModal").style.display = "none";    
+    visualizar('lista');
 }
 
 function dataFormatada(valueDate){
@@ -277,10 +301,7 @@ var str_hora = hora.toString().padStart(2, '0') + ':' + min.toString().padStart(
 
 return str_data + ' ' + str_hora;
 
-// Mostra o resultado
-alert('Hoje é ' + str_data + ' às ' + str_hora);
 }
-
 
 window.addEventListener('load', () => {
     lerBD()

@@ -1,13 +1,3 @@
-function abrirMenu(){
-  document.getElementById("menu").style.width = '300px';
-  document.getElementById("conteudo").style.marginLeft = '300px';
-}
-
-function fecharMenu(){
-  document.getElementById("menu").style.width = '0px';
-  document.getElementById("conteudo").style.marginLeft = '0px';
-}
-
 $(document).ready(function(){    
   $('.sub-btn').click(function(){
       $(this).next('.sub-menu').slideToggle();
@@ -27,5 +17,22 @@ $(document).ready(function(){
       $('.menu-btn').css("visibility", "visible");
       document.getElementById("conteudo").style.marginLeft = '0px';
       console.log("passo3");
-  });    
-  }); 
+  });  
+
+  const usuarioLogado = sessionStorage.getItem('usuario');
+  document.getElementById("usuarioLogado").innerHTML = 'Usuario Logado: ' + usuarioLogado;
+
+  if (usuarioLogado === 'tecnico') {
+    document.getElementById('menuCadastro').style.display = 'none';
+    document.getElementById('menuConfiguracoes').style.display = 'none';      
+  }
+
+  if (usuarioLogado === 'supervisor' || usuarioLogado === 'gerente' || usuarioLogado === 'demo') {
+    document.getElementById('menuCadastro').style.display = 'block';
+    document.getElementById('menuConfiguracoes').style.display = 'block';      
+  }
+
+
+
+    
+}); 

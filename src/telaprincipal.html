@@ -15,6 +15,8 @@
         <style>
             body {
                 background-image: url("https://contema.com.br/wp-content/uploads/2020/01/Manuten%C3%A7%C3%A3o-industrial-Entenda-como-funciona-sem-logo.jpg");
+                background-repeat: no-repeat;
+	              background-size: cover;
             }
         </style>
     </head>																						
@@ -31,14 +33,14 @@
                   <div class="menu">
                     <div class="item"><a href="telaprincipal.html"><i class="fas fa-desktop"></i>Home</a></div>
                     <div class="item">
-                      <a class="sub-btn"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
+                      <a class="sub-btn" id="menuCadastro"><i class="fas fa-table"></i>Cadastros<i class="fas fa-angle-right dropdown"></i></a>
                       <div class="sub-menu">
                         <a href="tipodeservico.html" class="sub-item">Tipo de Serviço</a>
                         <a href="equipamento.html" class="sub-item">Equipamentos</a>
                       </div>
                     </div>
                     <div class="item"><a href="gerarOS.html"><i class="fas fa-industry"></i>Ordem de Serviço</a></div>
-                    <div class="item">
+                    <div class="item" id="menuConfiguracoes">
                       <a class="sub-btn"><i class="fas fa-cogs"></i>Configuções<i class="fas fa-angle-right dropdown"></i></a>
                       <div class="sub-menu">
                         <a href="cadastroFuncao.html" class="sub-item">Usuário</a>
@@ -47,18 +49,13 @@
                     </div>
                     <div class="item"><a href="index.html"><i class="fas fa-info-circle"></i>Log out</a></div>
                   </div>
-                </div>        
-              </nav>
+                </div>                    
+            </nav>        
         </header>
         <main id="conteudo">
-            <div class="container">
-                <div class="bloco" id="graficoPizza"></div>
-                <div class="bloco" id="graficoPizza2"></div>                
-                <div class="bloco" id="graficoPizza3"></div>               
-                <div class="bloco" id="graficoPizza4"></div>
-            </div>
+          <div id="usuarioLogado2"></div>
         </main>
-
+        <footer id="usuarioLogado">></footer>
         <script src="js/menu.js"></script>
     </body>
 </html>
